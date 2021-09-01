@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Assistant-Regular;
+  src: url("./assets/fonts/Assistant/Assistant-Regular.ttf");
+}
+
+@font-face {
+  font-family: Assistant-Bold;
+  src: url("./assets/fonts/Assistant/Assistant-Bold.ttf");
+}
+
+@font-face {
+  font-family: Assistant-ExtraBold;
+  src: url("./assets/fonts/Assistant/Assistant-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Assistant-ExtraLight;
+  src: url("./assets/fonts/Assistant/Assistant-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: Assistant-Light;
+  src: url("./assets/fonts/Assistant/Assistant-Light.ttf");
+}
+
+@font-face {
+  font-family: Assistant-SemiBold;
+  src: url("./assets/fonts/Assistant/Assistant-SemiBold.ttf");
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+  font-family: "Assistant-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #5d5d5d;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
