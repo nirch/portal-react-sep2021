@@ -1,4 +1,7 @@
-.c-search>.search-input{
+div.c-search-pager{
+    position: relative;
+}
+div.c-search-pager>.search-input{
     border-radius:23px;
     border: #F5F5F5;
     height: 45px;
@@ -6,8 +9,29 @@
     color:#707070 ;
     font-family:"Assistant-Light";
     font-size:20px;
-    padding:9.9px 26px 9.1px 26px ;
+    padding:9.9px 26px 9.1px 26px;
+    width: 100%;
 }
-.c-search>.search-input:focus{
+
+div.c-search-pager>div.pages-container{
+    position: absolute;
+    left:0;
+    top:0;
+    margin: 9.9px 26px 9.1px 26px;
+}
+div.c-search-pager>.search-input:focus{
     outline: none;
+}
+div.c-search-pager>div.pages-container>img.img-arrow-right{
+    transform: rotate(180deg);
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+
+}
+div.c-search-pager>div.pages-container>img.img-arrow-left{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+
 }
