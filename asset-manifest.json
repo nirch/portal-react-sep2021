@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portal-react-sep2021/static/css/main.c5df6bf9.chunk.css",
+    "main.js": "/portal-react-sep2021/static/js/main.7acffb6b.chunk.js",
+    "main.js.map": "/portal-react-sep2021/static/js/main.7acffb6b.chunk.js.map",
+    "runtime-main.js": "/portal-react-sep2021/static/js/runtime-main.1151e77a.js",
+    "runtime-main.js.map": "/portal-react-sep2021/static/js/runtime-main.1151e77a.js.map",
+    "static/css/2.9a5322c9.chunk.css": "/portal-react-sep2021/static/css/2.9a5322c9.chunk.css",
+    "static/js/2.27ffaa2b.chunk.js": "/portal-react-sep2021/static/js/2.27ffaa2b.chunk.js",
+    "static/js/2.27ffaa2b.chunk.js.map": "/portal-react-sep2021/static/js/2.27ffaa2b.chunk.js.map",
+    "static/js/3.a01948dc.chunk.js": "/portal-react-sep2021/static/js/3.a01948dc.chunk.js",
+    "static/js/3.a01948dc.chunk.js.map": "/portal-react-sep2021/static/js/3.a01948dc.chunk.js.map",
+    "index.html": "/portal-react-sep2021/index.html",
+    "static/css/2.9a5322c9.chunk.css.map": "/portal-react-sep2021/static/css/2.9a5322c9.chunk.css.map",
+    "static/css/main.c5df6bf9.chunk.css.map": "/portal-react-sep2021/static/css/main.c5df6bf9.chunk.css.map",
+    "static/js/2.27ffaa2b.chunk.js.LICENSE.txt": "/portal-react-sep2021/static/js/2.27ffaa2b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/portal-react-sep2021/static/media/Assistant-SemiBold.0f0d4410.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1151e77a.js",
+    "static/css/2.9a5322c9.chunk.css",
+    "static/js/2.27ffaa2b.chunk.js",
+    "static/css/main.c5df6bf9.chunk.css",
+    "static/js/main.7acffb6b.chunk.js"
+  ]
+}
