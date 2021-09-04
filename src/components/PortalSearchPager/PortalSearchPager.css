@@ -1,7 +1,7 @@
 div.c-search-pager{
     position: relative;
 }
-div.c-search-pager>.search-input{
+div.c-search-pager>form>.search-input{
     border-radius:23px;
     border: #F5F5F5;
     height: 45px;
@@ -12,16 +12,23 @@ div.c-search-pager>.search-input{
     padding:9.9px 26px 9.1px 26px;
     width: 100%;
 }
-
+div.c-search-pager>form>.search-input:focus{
+    outline: none;
+}
 div.c-search-pager>div.pages-container{
     position: absolute;
     left:0;
     top:0;
     margin: 9.9px 26px 9.1px 26px;
+    font-size: 20px;
+    font-family: 'Assistant-Light';
 }
-div.c-search-pager>.search-input:focus{
-    outline: none;
+div.c-search-pager>div.pages-container>span.pages-num{
+    padding-right: 7px;
+    padding-left: 7px;
 }
+
+
 div.c-search-pager>div.pages-container>img.img-arrow-right{
     transform: rotate(180deg);
     cursor: pointer;
@@ -34,4 +41,7 @@ div.c-search-pager>div.pages-container>img.img-arrow-left{
     height: 15px;
     cursor: pointer;
 
+}
+.opacity{
+    opacity: 0.2;
 }
