@@ -2,19 +2,31 @@ div.c-search-pager{
     position: relative;
 }
 
-div.c-search-pager > form > input.search-input{
+div.c-search-pager > form > div.frame-input{
+    border-radius:23px;
+    border: #F5F5F5;
+    height: 45px;
+    background-color: #F5F5F5;
+}
+
+div.c-search-pager > form > div.frame-input > input.search-input{
     border-radius:23px;
     border: #F5F5F5;
     height: 45px;
     background-color: #F5F5F5;
     color:#707070 ;
     font-family:"Assistant-Light";
-    font-size:20px;
+    font-size:20px; 
     padding:9.9px 26px 9.1px 26px;
-    width: 100%;
+    width: 80%;
 }
 
-div.c-search-pager > form > input.search-input:focus{
+div.c-search-pager > form > div.frame-input > input.search-input::placeholder{
+    color:#707070 ;
+    opacity: 1; 
+}
+
+div.c-search-pager > form > div.frame-input >input.search-input:focus{
     outline: none;
 }
 
@@ -34,15 +46,18 @@ div.c-search-pager > div.pages-container > span.pages-num{
     text-align: center;
     display: inline-block; 
 }
+
 div.c-search-pager > div.pages-container > img{
     vertical-align: unset;
 }
+
 div.c-search-pager > div.pages-container > img.img-arrow-right{
     transform: rotate(180deg);
     cursor: pointer;
     width: 15px;
     height: 15px;
 }
+
 div.c-search-pager > div.pages-container > img.img-arrow-left{
     width: 15px;
     height: 15px;
