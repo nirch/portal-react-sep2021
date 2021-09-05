@@ -19,7 +19,7 @@ const CoursesPage = (props) => {
         <div className="p-courses">
             <PortalNavbar handleLogout={handleLogout}/>
             <h1>קורסים</h1>
-            <PortalTable headers ={headers} data = {data}/>
+            <PortalTable headers={headers} data={data}/>
         </div>
     );
 }

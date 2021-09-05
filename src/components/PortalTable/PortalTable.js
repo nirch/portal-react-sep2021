@@ -3,39 +3,28 @@ import './PortalTable.css';
 
 function PortalTable ({headers, data, onClick}) {
 
-    function tableHeader({headers})
+    function tableHeader()
     {
-        headers.map(item => <th>{headers.header}</th>)
+        return headers.map(item => <th>{headers.header}</th>)
     }
-
-    function tableBody({headers, data}){
-        function row (headers, data) 
-        {
-            for (i= 0 ; i<=headers.length ; i++) 
-            {
-                return(
-                    <td>{data.header}</td>
-                )
-            }
-        }
-        return(
-            <tr>
-                <title/>
-            </tr>
-        )
-
+    
+    function tableBody()
+    {
+       return data.map(dataEntry => <tr>
+            {headers.map(item => <td>{data[headers.key]}</td>)}
+        </tr>) 
     }
 
     return (
         <div>
           <table className="c-table">
             <thead>
-              <tr>
-               <tableHeader/>
-              </tr>
+                <tr>
+               {tableHeader()}
+               </tr>
             </thead>
             <tbody>
-                <tableBody/>
+                {tableBody()}
             </tbody>
           </table>
         </div>
