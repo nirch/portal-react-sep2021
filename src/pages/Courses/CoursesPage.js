@@ -8,8 +8,8 @@ import PortalTable from '../../components/PortalTable/PortalTable';
 const CoursesPage = (props) => {
     const { handleLogout } = props;
     const activeUser = useContext(ActiveUserContext);
-    const headers = [{key: "fname", header: "First Name"}, {key: "lname", header: "Last Name"}];
-    const data = [{id: "12212", fname: "Nir", lname: "Channes"}, {id: "2212", fname: "John", lname: "Doe"}]
+    const headers = [{key: "fname", header: "שם"}, {key: "lname", header: "שם משפחה"}, {key: "email", header: "אימייל"}];
+    const data = [{id: "12212", fname: "ניר", lname: "חנס", email: "nir@appleseeds.org"}, {id: "2212", fname: "ג'ון", lname: "דולב", email:"john@appleseeds.org"}];
     
     if (!activeUser) {
         return <Redirect to='/' />
