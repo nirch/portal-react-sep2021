@@ -1,0 +1,12 @@
+
+div.c-button-set>div.btns-row{
+    display: flex;
+    justify-content: space-between;
+    padding-right:27px;
+    padding-left:29px;
+}
+div.c-button-set>div.btns-row>div.btn-set{
+    font-size: 14px;
+    color:#1b166e;
+    cursor: pointer;   
+}
