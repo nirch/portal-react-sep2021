@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import './UsersPage.css'
 import PortalNavbar from '../../components/navbar/PortalNavbar';
 import ActiveUserContext from '../../shared/activeUserContext';
-import PortalTable from '../../components/PortalTable/PortalTable';
 import { Redirect } from 'react-router-dom'
 
 const UsersPage = (props) => {

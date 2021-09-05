@@ -3,7 +3,6 @@ import './CoursesPage.css'
 import PortalNavbar from '../../components/navbar/PortalNavbar';
 import ActiveUserContext from '../../shared/activeUserContext'
 import { Redirect } from 'react-router-dom'
-import PortalTable from '../../components/PortalTable/PortalTable';
 
 const CoursesPage = (props) => {
     const { handleLogout } = props;
