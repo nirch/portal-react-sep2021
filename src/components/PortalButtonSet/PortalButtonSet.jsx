@@ -2,7 +2,7 @@ import React from 'react';
 import './PortalButtonSet.css';
 
 /** ======= Props =======
- * - buttons : get array of objects {key:key,lable:lable}
+ * - buttons : get array of objects {key:"key","label:label"}
  * - onClick : function return object that pressed on
  * - pressedKey : get pressed button
  * - shadowBox: get 'top' ,'bottom' or emty string value
