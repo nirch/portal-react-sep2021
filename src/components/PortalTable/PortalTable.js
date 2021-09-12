@@ -5,13 +5,13 @@ function PortalTable ({headers, data, onClick}) {
 
     function tableHeader()
     {
-        return headers.map(item => <th>{item.header}</th>)
+        return headers.map((item, index) => <th key={index}>{item.header}</th>)
     }
     
     function tableBody()
     {
-       return data.map(dataEntry => <tr onClick = {onclick}>
-            {headers.map(item => <td>{dataEntry[item.key]}</td>)}
+       return data.map((dataEntry,index) => <tr key={index} onClick = {() => onClick(dataEntry)}>
+            {headers.map((item, index) => <td key={index}>{dataEntry[item.key]}</td>)}
         </tr>) 
     }
 
