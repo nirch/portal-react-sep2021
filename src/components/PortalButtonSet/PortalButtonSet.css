@@ -19,12 +19,12 @@ div.c-button-set > div.row-buttons {
     align-items: center;
 }
 
-div.c-button-set > div.row-buttons > div.single-btn{
-   cursor: pointer;
-   opacity: 0.7;
-}
+div.c-button-set > div.row-buttons > div{
+    cursor: pointer;
+    opacity: 0.7;
+ }
 
 div.c-button-set > div.row-buttons > div.btn-pressed{
     font-family:Assistant-SemiBold;   
-    cursor: pointer;
+    opacity: 1;
 }
