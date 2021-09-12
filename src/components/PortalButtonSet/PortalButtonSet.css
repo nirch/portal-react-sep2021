@@ -1,0 +1,30 @@
+div.c-button-set{
+    font-size:15px;
+    color:#5d5d5d;
+    font-family: Assistant-Light;      
+}
+
+div.c-button-set > .top{
+    box-shadow:0 -2px 8px #0000001a;
+}
+
+div.c-button-set > .bottom{
+    box-shadow:0 2px 8px #0000001a;
+}
+
+div.c-button-set > div.row-buttons {
+    height: 76px; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.c-button-set > div.row-buttons > div{
+    cursor: pointer;
+    opacity: 0.7;
+ }
+
+div.c-button-set > div.row-buttons > div.btn-pressed{
+    font-family:Assistant-SemiBold;   
+    opacity: 1;
+}
