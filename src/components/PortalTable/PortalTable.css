@@ -1,0 +1,28 @@
+.c-table
+{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.c-table thead tr th
+{
+    padding-bottom: 23px;
+    text-align: center;
+}
+
+.c-table tbody tr
+{
+    height: 58px;
+    box-shadow: 0px 3px 3px #0000001a;
+}
+
+.c-table tbody :not(tr:first-child) td::before 
+{
+    display: block;
+    content: "";
+    height: 16px;
+}
+
+

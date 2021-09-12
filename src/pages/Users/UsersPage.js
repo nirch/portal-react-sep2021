@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './UsersPage.css'
 import PortalNavbar from '../../components/navbar/PortalNavbar';
-import ActiveUserContext from '../../shared/activeUserContext'
+import ActiveUserContext from '../../shared/activeUserContext';
 import { Redirect } from 'react-router-dom'
 
 const UsersPage = (props) => {
