@@ -1,13 +1,18 @@
-div.p-users > div.container-search{
+div.p-users > div.c-search-pager{
     margin: 25px 12px 0px 12px;
 }
-
-div.p-users > div.container-table{
+div.p-users >div > table.c-table{
     margin: 32px 0 118px 0;
 }
 
-div.p-users > div.container-buttons{
+/* div.p-users > div.container-buttons{
     position: fixed;
     bottom: 0;
     width: 100%;
+} */
+
+div.p-users > div.c-button-set {
+    position: fixed;
+    bottom: 0;
+    width: 100%
 }

@@ -51,22 +51,15 @@ const UsersPage = (props) => {
     return (
         <div className="p-users">
             <PortalNavbar handleLogout={handleLogout} />
-            <div className="container-search">
                 <PortalSearchPager placeholder={"חיפוש עובד"}
                     pages={pages} currentPage={currentPage}
                     onSearchChange={onSearchChange}
                     onPageChange={setCurrentPage} />
-            </div>
-            <div className="container-table">
                 <PortalTable headers={[{ key: "firstname", header: "שם" }, { key: "lastname", header: "שם משפחה" }, { key: "email", header: "אימייל" }]}
                     data={data}
                     onClick={el => alert(el.firstname)} />
-            </div>
-            <div className="container-buttons">
                 <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
                     shadowBox="top" onClick={onButtonSetClick} pressedKey={userStatus} />
-
-            </div>
         </div>
     );
 }
