@@ -65,7 +65,7 @@ const UsersPage = (props) => {
             </div>
             <div className="container-buttons">
                 <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
-                    shadowBox={"top"} onClick={onButtonSetClick} pressedKey={userStatus} />
+                    shadowBox="top" onClick={onButtonSetClick} pressedKey={userStatus} />
 
             </div>
         </div>
