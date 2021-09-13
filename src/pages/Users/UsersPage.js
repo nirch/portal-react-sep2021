@@ -18,7 +18,7 @@ const UsersPage = (props) => {
     const [textSearch, setTextSearch] = useState("");
     const [data, setData] = useState([]);
     const [userStatus, setUserStatus] = useState(1);
-    const [userInfo , setUserInfo ] = useState(null);
+    const [userInfo, setUserInfo] = useState(null);
 
     useEffect(() => {
         const data = { desc: false, page: currentPage, search: textSearch, sorting: "userid", userstatus: userStatus };
@@ -36,7 +36,7 @@ const UsersPage = (props) => {
     }, [currentPage, textSearch, userStatus]);
 
 
-    
+
 
     const onButtonSetClick = (btn) => {
         setUserStatus(btn.key);
@@ -46,27 +46,27 @@ const UsersPage = (props) => {
         setTextSearch(txt);
         setCurrentPage(0);
     }
-  
+
     if (!activeUser) {
         return <Redirect to='/' />
     }
 
-    if(userInfo){
-        return <Redirect to={`/users/:${userInfo.userid}`} />     
+    if (userInfo) {
+        return <Redirect to={`/users/${userInfo.userid}`} />
     }
 
     return (
         <div className="p-users">
             <PortalNavbar handleLogout={handleLogout} />
-                <PortalSearchPager placeholder={"חיפוש עובד"}
-                    pages={pages} currentPage={currentPage}
-                    onSearchChange={onSearchChange}
-                    onPageChange={setCurrentPage} />
-                <PortalTable headers={[{ key: "firstname", header: "שם" }, { key: "lastname", header: "שם משפחה" }, { key: "email", header: "אימייל" }]}
-                    data={data}
-                    onClick={setUserInfo} />
-                <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
-                    shadowBox="top" onClick={onButtonSetClick} pressedKey={userStatus} />
+            <PortalSearchPager placeholder={"חיפוש עובד"}
+                pages={pages} currentPage={currentPage}
+                onSearchChange={onSearchChange}
+                onPageChange={setCurrentPage} />
+            <PortalTable headers={[{ key: "firstname", header: "שם" }, { key: "lastname", header: "שם משפחה" }, { key: "email", header: "אימייל" }]}
+                data={data}
+                onClick={setUserInfo} />
+            <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
+                shadowBox="top" onClick={onButtonSetClick} pressedKey={userStatus} />
         </div>
     );
 }
