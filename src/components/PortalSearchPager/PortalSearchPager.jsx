@@ -13,7 +13,7 @@ function PortalSearchPager({ placeholder, pages, currentPage, onSearchChange, on
         }
     }
     const onArrowLeft = () => {
-        if (currentPage < pages - 1) {
+        if (currentPage < pages ) {
             onPageChange(currentPage + 1);
         }
     }
@@ -33,7 +33,7 @@ function PortalSearchPager({ placeholder, pages, currentPage, onSearchChange, on
             {pages ? <div className="pages-container">
                 <img className={`img-arrow-right ${currentPage === 0 ? " opacity" : ""}`} src={arrowImg} onClick={onArrowRight} alt="" />
                 <span className="pages-num ">{currentPage + 1}</span>
-                <img className={`img-arrow-left ${currentPage === pages - 1 ? " opacity" : ""}`} src={arrowImg} onClick={onArrowLeft} alt="" />
+                <img className={`img-arrow-left ${currentPage === pages  ? " opacity" : ""}`} src={arrowImg} onClick={onArrowLeft} alt="" />
             </div> : null}
         </div>
     );

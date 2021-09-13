@@ -1,9 +1,11 @@
 div.p-users > div.container-search{
     margin: 25px 12px 0px 12px;
 }
+
 div.p-users > div.container-table{
     margin: 32px 12px 118px 12px;
 }
+
 div.p-users > div.container-buttons{
     position: fixed;
     bottom: 0;

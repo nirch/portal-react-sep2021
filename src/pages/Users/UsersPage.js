@@ -12,8 +12,8 @@ const UsersPage = (props) => {
     const { handleLogout } = props;
     const activeUser = useContext(ActiveUserContext);
 
-    
-    const [pages, setPages] = useState(null);
+
+    const [pages, setPages] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
     const [textSearch, setTextSearch] = useState("");
     const [data, setData] = useState([]);
@@ -21,43 +21,51 @@ const UsersPage = (props) => {
 
 
     useEffect(() => {
-        const data = { desc: false, page: currentPage, search: textSearch, sorting: "userid" ,userstatus:userStatus};
-        server(activeUser,data,"SearchStaffUnderMe")
-            .then(res=>{
-                if(res.data.error){
+        const data = { desc: false, page: currentPage, search: textSearch, sorting: "userid", userstatus: userStatus };
+        server(activeUser, data, "SearchStaffUnderMe")
+            .then(res => {
+                if (res.data.error) {
                     alert("Something going wrong")
-                }else{
+                } else {
                     console.log(res.data.pages);
                     setPages(res.data.pages);
                     setData(res.data.users);
                 }
             })
-    }, [pages, currentPage, textSearch , userStatus]);
+    }, [pages, currentPage, textSearch, userStatus]);
 
-    
 
     if (!activeUser) {
         return <Redirect to='/' />
     }
-  //  const data = { desc: false, page: currentPage, search: textSearch, sorting: "userid" };
-    
+
+    const onButtonSetClick = (btn) => {
+        setUserStatus(btn.key);
+        setCurrentPage(0);
+    }
+    const onSearchChange = (txt) => {
+        if (txt !== textSearch) {
+            setTextSearch(txt);
+            setCurrentPage(0);
+        }
+    }
     return (
         <div className="p-users">
             <PortalNavbar handleLogout={handleLogout} />
             <div className="container-search">
                 <PortalSearchPager placeholder={"חיפוש עובד"}
                     pages={pages} currentPage={currentPage}
-                    onSearchChange={setTextSearch}
+                    onSearchChange={onSearchChange}
                     onPageChange={setCurrentPage} />
             </div>
             <div className="container-table">
-                    <PortalTable headers={[{key: "firstname", header: "שם"}, {key: "lastname", header: "שם משפחה"},{key:"email",header:"אימייל"}]} 
-                        data={data}
-                        onClick={el=>alert(el.firstname)}/>
+                <PortalTable headers={[{ key: "firstname", header: "שם" }, { key: "lastname", header: "שם משפחה" }, { key: "email", header: "אימייל" }]}
+                    data={data}
+                    onClick={el => alert(el.firstname)} />
             </div>
             <div className="container-buttons">
-                <PortalButtonSet buttons={[{key:1 ,label:"עובדים פעילים"},{key:0 ,label:"לא פעילים"}]}
-                                shadowBox={"top"}  onClick={btn=>setUserStatus(btn.key)} pressedKey={userStatus}/>
+                <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
+                    shadowBox={"top"} onClick={onButtonSetClick} pressedKey={userStatus} />
 
             </div>
         </div>
