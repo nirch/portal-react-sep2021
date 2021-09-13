@@ -44,10 +44,8 @@ const UsersPage = (props) => {
         setCurrentPage(0);
     }
     const onSearchChange = (txt) => {
-        if (txt !== textSearch) {
             setTextSearch(txt);
             setCurrentPage(0);
-        }
     }
     return (
         <div className="p-users">
