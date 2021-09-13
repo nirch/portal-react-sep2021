@@ -32,7 +32,7 @@ const UsersPage = (props) => {
                     setData(res.data.users);
                 }
             })
-    }, [pages, currentPage, textSearch, userStatus]);
+    }, [currentPage, textSearch, userStatus]);
 
 
     if (!activeUser) {
