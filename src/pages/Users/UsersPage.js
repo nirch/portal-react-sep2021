@@ -27,8 +27,9 @@ const UsersPage = (props) => {
                 if (res.data.error) {
                     alert("Something going wrong")
                 } else {
-                    console.log(res.data.pages);
-                    setPages(res.data.pages);
+                    if (res.data.pages !== pages) {
+                        setPages(res.data.pages);
+                    }
                     setData(res.data.users);
                 }
             })
@@ -44,8 +45,8 @@ const UsersPage = (props) => {
         setCurrentPage(0);
     }
     const onSearchChange = (txt) => {
-            setTextSearch(txt);
-            setCurrentPage(0);
+        setTextSearch(txt);
+        setCurrentPage(0);
     }
     return (
         <div className="p-users">
