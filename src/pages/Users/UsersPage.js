@@ -18,7 +18,7 @@ const UsersPage = (props) => {
     const [textSearch, setTextSearch] = useState("");
     const [data, setData] = useState([]);
     const [userStatus, setUserStatus] = useState(1);
-
+    const [userInfo , setUserInfo ] = useState(null);
 
     useEffect(() => {
         const data = { desc: false, page: currentPage, search: textSearch, sorting: "userid", userstatus: userStatus };
@@ -36,9 +36,7 @@ const UsersPage = (props) => {
     }, [currentPage, textSearch, userStatus]);
 
 
-    if (!activeUser) {
-        return <Redirect to='/' />
-    }
+    
 
     const onButtonSetClick = (btn) => {
         setUserStatus(btn.key);
@@ -48,6 +46,15 @@ const UsersPage = (props) => {
         setTextSearch(txt);
         setCurrentPage(0);
     }
+  
+    if (!activeUser) {
+        return <Redirect to='/' />
+    }
+
+    if(userInfo){
+        return <Redirect to={`/users/:${userInfo.userid}`} />     
+    }
+
     return (
         <div className="p-users">
             <PortalNavbar handleLogout={handleLogout} />
@@ -57,7 +64,7 @@ const UsersPage = (props) => {
                     onPageChange={setCurrentPage} />
                 <PortalTable headers={[{ key: "firstname", header: "שם" }, { key: "lastname", header: "שם משפחה" }, { key: "email", header: "אימייל" }]}
                     data={data}
-                    onClick={el => alert(el.firstname)} />
+                    onClick={setUserInfo} />
                 <PortalButtonSet buttons={[{ key: 1, label: "עובדים פעילים" }, { key: 0, label: "לא פעילים" }]}
                     shadowBox="top" onClick={onButtonSetClick} pressedKey={userStatus} />
         </div>
