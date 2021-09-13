@@ -2,6 +2,7 @@ div.c-button-set{
     font-size:15px;
     color:#5d5d5d;
     font-family: Assistant-Light;      
+    
 }
 
 div.c-button-set > .top{
@@ -17,6 +18,7 @@ div.c-button-set > div.row-buttons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color:white;
 }
 
 div.c-button-set > div.row-buttons > div{
