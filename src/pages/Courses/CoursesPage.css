@@ -1,0 +1,14 @@
+.p-courses .c-search-pager{
+    margin: 25px 12px 32px 12px;
+}
+
+.p-courses div.c-button-set{
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+}
+
+.p-courses .c-table
+{
+margin-bottom: 118px;
+}
