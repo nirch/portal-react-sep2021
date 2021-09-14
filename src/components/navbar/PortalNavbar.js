@@ -62,7 +62,7 @@ const PortalNavbar = (props) => {
                             </div>
                             <div className="menu-item menu-information">
                                 <img className="time-icon" src={timeImg} />
-                                <a className="item-link" href="#//hours-report">דיווח שעות</a>
+                                <a className="item-link" href="#/hours-report">דיווח שעות</a>
                             </div>
                             <div className="menu-item menu-information">
                                 <img className="check-icon" src={checkImg} />
