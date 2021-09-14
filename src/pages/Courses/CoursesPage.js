@@ -59,7 +59,7 @@ const CoursesPage = (props) => {
 
     return (
         <div className="p-courses">
-            <PortalNavbar handleLogout={handleLogout}/>
+            <PortalNavbar handleLogout={handleLogout} title="קורסים"/>
             <PortalSearchPager placeholder="חיפוש קורס" pages={pages} currentPage={currentPage} onSearchChange={querySearch} onPageChange={pageChanger} /> 
             <PortalTable headers={headers} data={coursesData} onClick={(course) => setCourseID(course.courseid)}/>
             <PortalButtonSet buttons={buttons} onClick={buttonClick} pressedKey={pressedKey} shadowBox="top" />
