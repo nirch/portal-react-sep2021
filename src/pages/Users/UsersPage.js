@@ -57,7 +57,7 @@ const UsersPage = (props) => {
 
     return (
         <div className="p-users">
-            <PortalNavbar handleLogout={handleLogout} />
+            <PortalNavbar handleLogout={handleLogout} title="עובדים"/>
             <PortalSearchPager placeholder={"חיפוש עובד"}
                 pages={pages} currentPage={currentPage}
                 onSearchChange={onSearchChange}
