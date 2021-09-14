@@ -29,17 +29,27 @@ const CoursesPage = (props) => {
                 alert("error in data");
             } else {
                 setCoursesData(res.data.courses);
+                setPages(res.data.pages); //if?
+
             }    console.log(res.data);
         })
-     }, [currentPage, pressedKey]);
+     }, [currentPage, pressedKey, searchQuery]);
 
     function buttonClick(btn){
         setPressedKey(btn.key);
     }
 
-    function clickedEntry (user){
-        alert (user);
-        console.log(user);
+    function clickedEntry(course){
+        alert (course);
+        console.log(course);
+    }
+
+    function pageChanger(num){
+        setCurrentPage(num);
+    }
+
+    function querySearch(querytext){
+        setSeachQuery(querytext);
     }
     
     if (!activeUser) {
@@ -50,7 +60,7 @@ const CoursesPage = (props) => {
         <div className="p-courses">
             <PortalNavbar handleLogout={handleLogout}/>
             <h1>קורסים</h1>
-            {/* <PortalSearchPager placeholder={"חיפוש קורס"} pages={pages} currentPage={currentPage} onSearchChange={querySearch} onPageChange={pageChanger} />  */}
+            <PortalSearchPager placeholder={"חיפוש קורס"} pages={pages} currentPage={currentPage} onSearchChange={querySearch} onPageChange={pageChanger} /> 
             <PortalTable headers={headers} data={coursesData} onClick={clickedEntry}/>
             <PortalButtonSet buttons={buttons} onClick={buttonClick} pressedKey={pressedKey} shadowBox={shadowBox} />
 
