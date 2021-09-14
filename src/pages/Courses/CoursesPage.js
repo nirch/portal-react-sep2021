@@ -13,13 +13,13 @@ const CoursesPage = (props) => {
     const activeUser = useContext(ActiveUserContext);
     const headers = [{key: "subname", header: "שם קורס מקוצר"}, {key: "project", header: "פרויקט"}, {key: "teachers", header: "מדריך"}];
 
-    const [pages, setPages] = React.useState(10);
+    const [pages, setPages] = React.useState(0);
     const [currentPage, setCurrentPage] = React.useState(0);
     const [pressedKey, setPressedKey] = React.useState(1);
     const [searchQuery, setSeachQuery] = React.useState ("");
     const [coursesData, setCoursesData] = React.useState ([]);
+    const [courseID, setCourseID] = React.useState (null);
     const buttons = [{label: "קורסים פעילים", key: 1 }, { label: "לא פעילים", key: 0 }];
-    const [shadowBox, setShadowbox] = React.useState ("top");
 
     useEffect(()=>{
         const data = {coursestatus: pressedKey, desc: false, page: currentPage, search: searchQuery, sorting: "courseid"};
@@ -30,18 +30,13 @@ const CoursesPage = (props) => {
             } else {
                 setCoursesData(res.data.courses);
                 setPages(res.data.pages); //if?
-
-            }    console.log(res.data);
+            }    
         })
      }, [currentPage, pressedKey, searchQuery]);
 
     function buttonClick(btn){
         setPressedKey(btn.key);
-    }
-
-    function clickedEntry(course){
-        alert (course);
-        console.log(course);
+        setCurrentPage(0);
     }
 
     function pageChanger(num){
@@ -50,18 +45,24 @@ const CoursesPage = (props) => {
 
     function querySearch(querytext){
         setSeachQuery(querytext);
+        setCurrentPage(0);
     }
     
     if (!activeUser) {
         return <Redirect to='/' />
     }
 
+    if (courseID) {
+        return <Redirect to={'/courses/' + courseID}/>
+    }
+    
+
     return (
         <div className="p-courses">
             <PortalNavbar handleLogout={handleLogout}/>
-            <PortalSearchPager placeholder={"חיפוש קורס"} pages={pages} currentPage={currentPage} onSearchChange={querySearch} onPageChange={pageChanger} /> 
-            <PortalTable headers={headers} data={coursesData} onClick={clickedEntry}/>
-            <PortalButtonSet buttons={buttons} onClick={buttonClick} pressedKey={pressedKey} shadowBox={shadowBox} />
+            <PortalSearchPager placeholder="חיפוש קורס" pages={pages} currentPage={currentPage} onSearchChange={querySearch} onPageChange={pageChanger} /> 
+            <PortalTable headers={headers} data={coursesData} onClick={(course) => setCourseID(course.courseid)}/>
+            <PortalButtonSet buttons={buttons} onClick={buttonClick} pressedKey={pressedKey} shadowBox="top" />
 
         </div>
     );

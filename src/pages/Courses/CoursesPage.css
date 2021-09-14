@@ -2,6 +2,8 @@
     margin: 25px 12px 32px 12px;
 }
 
-.p-courses .c-table tr{
-    margin-top: 152px;
+.p-courses div.c-button-set{
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
 }
